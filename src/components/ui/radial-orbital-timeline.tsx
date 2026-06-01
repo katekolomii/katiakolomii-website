@@ -263,7 +263,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
             border: "1px solid rgba(26,26,26,0.2)",
             zIndex: 2,
             transition: "opacity 0.7s ease",
-            opacity: centerHovered ? 0.15 : 1,
+            opacity: centerHovered ? 0 : 1,
           }}>
             <span style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
