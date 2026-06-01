@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { GraduationCap, Briefcase, FolderGit2, User } from "lucide-react";
+import { GraduationCap, Briefcase, FolderGit2, User, Code2 } from "lucide-react";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 
 const MONO     = "'DM Mono', monospace";
@@ -127,7 +127,7 @@ function ExpEntry({ org, role, date, detail, tags }: ExpEntryProps) {
   return (
     <div style={{ padding: "16px 28px", borderBottom: "0.5px solid #e8e4de", fontFamily: MONO }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 2 }}>
-        <span style={{ fontFamily: "'Anton', sans-serif", fontSize: "18px", letterSpacing: "0", color: "#0d0d0d" }}>◇ {org}</span>
+        <span style={{ fontFamily: "'Anton', sans-serif", fontSize: "18px", letterSpacing: "0", color: "#0d0d0d" }}>{org}</span>
         <span style={{ fontFamily: MONO, fontSize: "11px", color: "#bbb", letterSpacing: "0.06em", whiteSpace: "nowrap" as const, marginLeft: 12, paddingTop: 2 }}>{date}</span>
       </div>
       <div style={{ fontFamily: PLAYFAIR, fontStyle: "italic", fontSize: "15px", color: "#444", marginBottom: 2 }}>{role}</div>
@@ -156,7 +156,7 @@ const experienceContent = (
       <ExpEntry
         org="Pulse" role="Data Scientist" date="Jan — Apr 2026"
         detail="Washington, DC"
-        tags={[xtag("Python", "skill"), xtag("ML", "skill"), xtag("Pandas", "skill")]}
+        tags={[xtag("Python", "skill"), xtag("scikit-learn", "skill"), xtag("Pandas", "skill")]}
       />
       <ExpEntry
         org="Ministry of Digital Transformation" role="AI Research Intern" date="Jun — Aug 2024"
@@ -164,18 +164,11 @@ const experienceContent = (
         tags={[xtag("Trembita", "dark", "https://trembita.gov.ua/en"), xtag("Tableau", "skill"), xtag("LSTM", "skill"), xtag("Time Series", "skill"), xtag("Python", "skill")]}
       />
       <ExpEntry
-        org="Stanford Summer Session" role="Machine Learning Researcher" date="Jun — Jul 2023"
+        org="Stanford Summer Session" role="Machine Learning Fellow" date="Jun — Jul 2023"
         detail="Stanford, CA"
         tags={[xtag("NASA NEO Dataset"), xtag("scikit-learn", "skill"), xtag("SMOTE", "skill"), xtag("Streamlit", "skill"), xtag("NumPy", "skill")]}
       />
 
-      {/* Skills */}
-      <div style={{ padding: "14px 28px 18px" }}>
-        <div style={{ fontFamily: MONO, fontSize: "10px", letterSpacing: "3px", color: "#bbb", textTransform: "uppercase" as const, marginBottom: 10 }}>SKILLS</div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
-          {["Python","C++","JavaScript","SQL","scikit-learn","TensorFlow","PyTorch","Pandas","NumPy","Selenium","Streamlit","Tableau","Git"].map(s => xtag(s, "skill"))}
-        </div>
-      </div>
     </div>
   </div>
 );
@@ -342,7 +335,7 @@ const projectsContent = (
         <ProjEntry
           last
           title="LangSpace"
-          links={[{ href: "#", label: "soon" }]}
+          links={[{ href: "javascript:void(0)", label: "soon" }]}
           description="Language learning platform with AI-powered feedback across four skill modules — listening, reading, writing, and speaking. Weekly planner with streak tracking. AI quizzes by proficiency level, grades written submissions, and explains vocabulary with generated images."
           tags={["Next.js", "TypeScript", "Groq", "GPT-4o-mini", "DALL-E 3"]}
         />
@@ -352,11 +345,36 @@ const projectsContent = (
   </div>
 );
 
+const skillSection = (heading: string, skills: string[]) => (
+  <div style={{ marginBottom: 18 }}>
+    <div style={{ fontFamily: MONO, fontSize: "10px", letterSpacing: "0.22em", color: "#c4687e", textTransform: "uppercase" as const, marginBottom: 10 }}>{heading}</div>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+      {skills.map(s => xtag(s, "skill"))}
+    </div>
+  </div>
+);
+
+const skillsContent = (
+  <div style={{ width: "100%", fontFamily: MONO, paddingBottom: 8 }}>
+    <div style={{ position: "relative", margin: "16px 4% 16px 4%", width: "92%", border: "1px solid #e8e4de" }}>
+      {corners}
+      <div style={{ padding: "18px 28px" }}>
+        {skillSection("Languages", ["Python", "C++", "JavaScript", "TypeScript", "SQL"])}
+        {skillSection("Machine Learning & AI", ["PyTorch", "TensorFlow", "scikit-learn", "Pandas", "NumPy", "LSTM", "GAE", "SMOTE", "MuJoCo", "Groq", "GPT-4o-mini", "DALL-E 3", "NLP"])}
+        {skillSection("Web & Automation", ["Next.js", "Streamlit", "Selenium", "ChromeDriver", "OpenStreetMap", "Google Maps API"])}
+        {skillSection("Data & Visualization", ["Tableau", "Regression", "Time Series"])}
+        {skillSection("Tools", ["Git", "Docker", "Linux", "Bash", "REST APIs"])}
+      </div>
+    </div>
+  </div>
+);
+
 const timelineData = [
-    { id: 1, title: "Education",  date: "", content: "", category: "Education",  icon: GraduationCap, nodeLabel: "Ed.", relatedIds: [2, 4], status: "completed" as const,     energy: 90,  color: "#f9a8d4", customContent: educationContent },
+    { id: 1, title: "Education",  date: "", content: "", category: "Education",  icon: GraduationCap, nodeLabel: "Ed.", relatedIds: [2, 5], status: "completed" as const,     energy: 90,  color: "#f9a8d4", customContent: educationContent },
     { id: 2, title: "Experience", date: "", content: "", category: "Experience", icon: Briefcase,     nodeLabel: "Ex.", relatedIds: [1, 3], status: "completed" as const,     energy: 80,  color: "#f9a8d4", customContent: experienceContent },
     { id: 3, title: "Projects",   date: "", content: "", category: "Projects",   icon: FolderGit2,    nodeLabel: "Pr.", relatedIds: [2, 4], status: "in-progress" as const,   energy: 70,  color: "#f9a8d4", customContent: projectsContent },
-    { id: 4, title: "About Me",   date: "", content: "", category: "About",      icon: User,          nodeLabel: "Ab.", relatedIds: [3, 1], status: "completed" as const,     energy: 100, color: "#f9a8d4", customContent: aboutContent },
+    { id: 4, title: "Stack",      date: "", content: "", category: "Stack",      icon: Code2,         nodeLabel: "St.", relatedIds: [3, 5], status: "completed" as const,     energy: 75,  color: "#f9a8d4", customContent: skillsContent },
+    { id: 5, title: "About Me",   date: "", content: "", category: "About",      icon: User,          nodeLabel: "Ab.", relatedIds: [4, 1], status: "completed" as const,     energy: 100, color: "#f9a8d4", customContent: aboutContent },
 ];
 
 export function RadialOrbitalTimelineDemo() {
