@@ -36,7 +36,7 @@ export const AuroraBackground = ({
                   #bfdbfe 0%,
                   #c7d2fe 12%,
                   #ddd6fe 24%,
-                  #fbcfe8 36%,
+                  #e0e7ff 36%,
                   #bfdbfe 48%
                 )
               `,

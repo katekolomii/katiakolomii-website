@@ -32,6 +32,7 @@ interface TimelineItem {
   content: string;
   category: string;
   icon: React.ComponentType<{ size?: number | string }>;
+  nodeLabel?: string;
   relatedIds: number[];
   status: "completed" | "in-progress" | "pending";
   energy: number;
@@ -141,6 +142,25 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
     });
   };
 
+  const handleNavigate = (direction: 1 | -1) => {
+    if (!selectedNodeId || isAnimating) return;
+    const currentIdx = timelineData.findIndex(d => d.id === selectedNodeId);
+    const nextIdx = (currentIdx + direction + timelineData.length) % timelineData.length;
+    const nextItem = timelineData[nextIdx];
+    setCardVisible(false);
+    setSelectedNodeId(null);
+    setIsAnimating(true);
+    const targetRotation = TOP_ANGLE - (nextIdx / timelineData.length) * 360;
+    setTimeout(() => {
+      animateAngle(rotationRef.current, targetRotation, 380, () => {
+        setIsAnimating(false);
+        setSelectedNodeId(nextItem.id);
+        setPulsingNodeId(nextItem.id);
+        setTimeout(() => { setPulsingNodeId(null); setCardVisible(true); }, 150);
+      });
+    }, 120);
+  };
+
   const handleClose = () => {
     setCardVisible(false);
     setSelectedNodeId(null);
@@ -202,8 +222,6 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
             transform: "translate(-50%, -50%)",
             display: "flex", alignItems: "center", justifyContent: "center",
             cursor: "crosshair", zIndex: 10,
-            opacity: orbiting ? 0.2 : 1,
-            transition: "opacity 0.4s ease",
           }}
           onMouseEnter={() => setCenterHovered(true)}
           onMouseLeave={() => setCenterHovered(false)}
@@ -297,7 +315,19 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
                   transition: "background 0.2s, border-color 0.2s, box-shadow 0.2s",
                 }}
               >
-                <Icon size={16} />
+                {item.nodeLabel ? (
+                  <span style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontStyle: "italic",
+                    fontSize: "17px",
+                    fontWeight: 400,
+                    color: "inherit",
+                    lineHeight: 1,
+                    userSelect: "none",
+                  }}>{item.nodeLabel}</span>
+                ) : (
+                  <Icon size={16} />
+                )}
               </motion.div>
 
               <div style={{
@@ -306,8 +336,9 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
                 left: NODE_SIZE / 2,
                 transform: "translateX(-50%)",
                 whiteSpace: "nowrap",
-                fontFamily: "'DM Mono', monospace",
-                fontSize: "13px", fontWeight: 400, letterSpacing: "0.06em",
+                fontFamily: "'Playfair Display', serif",
+                fontStyle: "italic",
+                fontSize: "13px", fontWeight: 400, letterSpacing: "0.02em",
                 color: isSelected || isHovered ? "#e86ca4" : "#1a1a1a",
                 transition: "color 0.2s",
               }}>{item.title}</div>
@@ -357,25 +388,21 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
             >
               {/* Header */}
               <div style={{
-                padding: "12px 16px 10px",
+                padding: "10px 14px 9px",
                 background: "#1a1a1a",
                 display: "flex", justifyContent: "space-between", alignItems: "center",
                 flexShrink: 0,
               }}>
-                <span style={{
-                  fontFamily: "'Anton', sans-serif",
-                  color: "#f7f5f2", fontSize: "15px", letterSpacing: "0.12em",
-                }}>{selectedItem.title.toUpperCase()}</span>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <button onClick={e => { e.stopPropagation(); handleNavigate(-1); }}
+                    style={{ background: "none", border: "none", color: "rgba(247,245,242,0.45)", cursor: "pointer", fontSize: 14, padding: 0, lineHeight: 1, fontFamily: "Georgia, serif" }}>‹</button>
+                  <span style={{ fontFamily: "'Anton', sans-serif", color: "#f7f5f2", fontSize: "15px", letterSpacing: "0.12em" }}>{selectedItem.title.toUpperCase()}</span>
+                  <button onClick={e => { e.stopPropagation(); handleNavigate(1); }}
+                    style={{ background: "none", border: "none", color: "rgba(247,245,242,0.45)", cursor: "pointer", fontSize: 14, padding: 0, lineHeight: 1, fontFamily: "Georgia, serif" }}>›</button>
+                </div>
                 <button
                   onClick={e => { e.stopPropagation(); handleClose(); }}
-                  style={{
-                    background: "none",
-                    border: "1px solid rgba(247,245,242,0.25)",
-                    color: "#f7f5f2", cursor: "pointer",
-                    width: 18, height: 18,
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: 11, padding: 0, flexShrink: 0,
-                  }}
+                  style={{ background: "none", border: "1px solid rgba(247,245,242,0.25)", color: "#f7f5f2", cursor: "pointer", width: 18, height: 18, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, padding: 0, flexShrink: 0 }}
                 >×</button>
               </div>
 
