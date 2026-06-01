@@ -1,10 +1,11 @@
-import type { ReactNode } from "react";
-import { GraduationCap, Briefcase, FolderGit2, Heart, User } from "lucide-react";
+import { useState, type ReactNode } from "react";
+import { GraduationCap, Briefcase, FolderGit2, User } from "lucide-react";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 
-const ACCENT  = "#c4846a";
-const MONO    = "'DM Mono', monospace";
+const ACCENT   = "#c4846a";
+const MONO     = "'DM Mono', monospace";
 const PLAYFAIR = "'Playfair Display', serif";
+const GARAMOND = "'EB Garamond', serif";
 
 const tag = (name: string, ip?: boolean) => (
   <span key={name} style={{
@@ -93,6 +94,92 @@ function EduEntry({ active, status, dateRange, institution, location, titles, st
   );
 }
 
+// ── Experience tag helpers ──────────────────────────────────────────────────
+const xtag = (name: string, variant: "dark" | "skill" | "current" = "dark", href?: string) => {
+  const styles = {
+    dark:    { color: "#555",    border: "0.5px solid #ccc",    background: "transparent" },
+    skill:   { color: "#6a8a6a", border: "0.5px solid #c8ddc8", background: "#f4f8f4" },
+    current: { color: ACCENT,   border: "0.5px solid #e8d0c8", background: "transparent" },
+  }[variant];
+  const shared = {
+    ...styles,
+    fontFamily: MONO, fontSize: "11px", letterSpacing: "0.04em",
+    padding: "3px 10px", borderRadius: "20px",
+    display: "inline-flex" as const, alignItems: "center",
+    whiteSpace: "nowrap" as const,
+  };
+  if (href) return (
+    <a key={name} href={href} target="_blank" rel="noopener noreferrer"
+      style={{ ...shared, textDecoration: "none", cursor: "pointer" }}>{name} ↗</a>
+  );
+  return <span key={name} style={shared}>{name}</span>;
+};
+
+interface ExpEntryProps {
+  org: string;
+  role: string;
+  date: string;
+  detail: string;
+  tags: ReactNode[];
+}
+
+function ExpEntry({ org, role, date, detail, tags }: ExpEntryProps) {
+  return (
+    <div style={{ padding: "16px 28px", borderBottom: "0.5px solid #e8e4de", fontFamily: MONO }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 2 }}>
+        <span style={{ fontFamily: "'Anton', sans-serif", fontSize: "18px", letterSpacing: "0", color: "#0d0d0d" }}>{org}</span>
+        <span style={{ fontFamily: MONO, fontSize: "11px", color: "#bbb", letterSpacing: "0.06em", whiteSpace: "nowrap" as const, marginLeft: 12, paddingTop: 2 }}>{date}</span>
+      </div>
+      <div style={{ fontFamily: PLAYFAIR, fontStyle: "italic", fontSize: "15px", color: "#444", marginBottom: 2 }}>{role}</div>
+      <div style={{ fontFamily: MONO, fontSize: "11px", color: "#aaa", letterSpacing: "0.04em", marginBottom: 6 }}>{detail}</div>
+      <div style={{ display: "flex", flexWrap: "wrap", columnGap: 5, rowGap: 4 }}>{tags}</div>
+    </div>
+  );
+}
+
+const experienceContent = (
+  <div style={{ width: "100%", fontFamily: MONO, paddingBottom: 8 }}>
+    {/* Inner bordered box — same treatment as EduEntry */}
+    <div style={{ position: "relative", margin: "16px 4% 16px 4%", width: "92%", border: "1px solid #e8e4de" }}>
+      {corners}
+
+      <ExpEntry
+        org="Georgetown University" role="Teaching Assistant" date="Aug 2025 — present"
+        detail="Data Structures · CS I & II · 100+ students"
+        tags={[xtag("current", "current"), xtag("COSC 1020/1030"), xtag("COSC 2010")]}
+      />
+      <ExpEntry
+        org="Ministry of Digital Transformation" role="Software Engineer Intern" date="Jul — Aug 2025"
+        detail="Ukraine · Kyiv"
+        tags={[xtag("Diia", "dark", "https://diia.gov.ua/en"), xtag("Google Maps API"), xtag("Python", "skill"), xtag("Selenium", "skill"), xtag("OpenStreetMap", "skill"), xtag("NLP", "skill")]}
+      />
+      <ExpEntry
+        org="Pulse" role="Data Scientist" date="Jan — Apr 2026"
+        detail="Washington, DC"
+        tags={[xtag("Python", "skill"), xtag("ML", "skill"), xtag("Pandas", "skill")]}
+      />
+      <ExpEntry
+        org="Ministry of Digital Transformation" role="AI Research Intern" date="Jun — Aug 2024"
+        detail="Ukraine · Kyiv"
+        tags={[xtag("Trembita", "dark", "https://trembita.gov.ua/en"), xtag("Tableau", "skill"), xtag("LSTM", "skill"), xtag("Time Series", "skill"), xtag("Python", "skill")]}
+      />
+      <ExpEntry
+        org="Stanford Summer Session" role="Machine Learning Researcher" date="Jun — Jul 2023"
+        detail="Stanford, CA"
+        tags={[xtag("NASA NEO Dataset"), xtag("scikit-learn", "skill"), xtag("SMOTE", "skill"), xtag("Streamlit", "skill"), xtag("NumPy", "skill")]}
+      />
+
+      {/* Skills */}
+      <div style={{ padding: "14px 28px 18px" }}>
+        <div style={{ fontFamily: MONO, fontSize: "10px", letterSpacing: "3px", color: "#bbb", textTransform: "uppercase" as const, marginBottom: 10 }}>SKILLS</div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+          {["Python","C++","JavaScript","SQL","scikit-learn","TensorFlow","PyTorch","Pandas","NumPy","Selenium","Streamlit","Tableau","Git"].map(s => xtag(s, "skill"))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const educationContent = (
   <div style={{ width: "100%", fontFamily: MONO, paddingBottom: 8 }}>
     <EduEntry
@@ -114,7 +201,7 @@ const educationContent = (
         ]},
       ]}
     />
-    <div style={{ margin: "8px 1% 8px 11%", width: "88%", borderTop: "1px solid #e8e4de" }} />
+    <div style={{ margin: "0 4%", borderTop: "1px solid #e8e4de" }} />
     <EduEntry
       active={false} status="COMPLETED" dateRange="2022 – 2024"
       institution="TABOR ACADEMY" location="Marion, MA"
@@ -136,12 +223,134 @@ const educationContent = (
   </div>
 );
 
+const aboutContent = (
+  <div style={{ width: "100%", fontFamily: MONO, paddingBottom: 8 }}>
+    <div style={{ position: "relative", margin: "16px 4% 16px 4%", width: "92%", border: "1px solid #e8e4de" }}>
+      {corners}
+      <div style={{ padding: "18px 28px" }}>
+
+        {/* Background */}
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ fontFamily: MONO, fontSize: "10px", letterSpacing: "0.22em", color: "#bbb", textTransform: "uppercase" as const, marginBottom: 10 }}>BACKGROUND</div>
+          <div style={{ fontFamily: MONO, fontSize: "12px", color: "#444", lineHeight: 1.75 }}>
+            Born and raised in Nizhyn, Ukraine. Moved to the US for prep school at Tabor Academy in Massachusetts, then Georgetown in DC. Somewhere between Kyiv, Marion, and Washington I figured out I wanted to work on technology that actually matters — defense, civic infrastructure, AI for real problems. Fluent in Ukrainian, Russian, and English.
+          </div>
+        </div>
+
+        {/* Beyond the Resume */}
+        <div style={{ borderTop: "0.5px solid #e8e4de", paddingTop: 16 }}>
+          <div style={{ fontFamily: MONO, fontSize: "10px", letterSpacing: "0.22em", color: "#bbb", textTransform: "uppercase" as const, marginBottom: 10 }}>RANDOM FACTS</div>
+          <div style={{ fontFamily: MONO, fontSize: "12px", color: "#444", lineHeight: 1.75 }}>
+            I've won 45+ national and international dance competitions as part of the Ukrainian Dance Team Harmoniia and Tabor's dance company. Graduated from Nizhyn Choreographic School with high honors in 2019. I once ran an eco education program in my hometown that got recognized by Ukraine's Ministry of Youth and Sports and funded by the British Council.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+);
+
+// ── Projects helpers ────────────────────────────────────────────────────────
+
+function ProjLink({ href, label }: { href: string; label: string }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer"
+      style={{ fontFamily: MONO, fontSize: "8px", color: hovered ? "#0d0d0d" : "#aaa", borderBottom: "0.5px solid #ddd", textDecoration: "none", letterSpacing: "0.04em", transition: "color 0.15s" }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >{label}</a>
+  );
+}
+
+function SectionHeader({ title }: { title: string }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 16 }}>
+      <div style={{ fontFamily: PLAYFAIR, fontStyle: "italic", fontSize: "28px", color: "#0d0d0d", whiteSpace: "nowrap" as const, lineHeight: 1 }}>{title}</div>
+      <div style={{ flex: 1, borderTop: "0.5px solid #e8e4de" }} />
+    </div>
+  );
+}
+
+interface ProjEntryProps {
+  title: string;
+  links?: { href: string; label: string }[];
+  description: ReactNode;
+  tags: string[];
+  last?: boolean;
+}
+
+function ProjEntry({ title, links, description, tags, last }: ProjEntryProps) {
+  return (
+    <div style={{ paddingBottom: last ? 0 : 16, borderBottom: last ? "none" : "0.5px solid #e8e4de", marginBottom: last ? 0 : 16 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 5 }}>
+        <span style={{ fontFamily: "'Anton', sans-serif", fontSize: "15px", color: "#0d0d0d", letterSpacing: "0" }}>{title}</span>
+        {links && links.length > 0 && (
+          <div style={{ display: "flex", gap: 10, flexShrink: 0, marginLeft: 12 }}>
+            {links.map(l => <ProjLink key={l.label} href={l.href} label={l.label} />)}
+          </div>
+        )}
+      </div>
+      <div style={{ fontFamily: GARAMOND, fontSize: "14px", color: "#555", lineHeight: 1.7, marginBottom: 8 }}>{description}</div>
+      <div style={{ display: "flex", flexWrap: "wrap", columnGap: 5, rowGap: 4 }}>
+        {tags.map(t => xtag(t, "skill"))}
+      </div>
+    </div>
+  );
+}
+
+const projectsContent = (
+  <div style={{ width: "100%", fontFamily: MONO, paddingBottom: 8 }}>
+    <div style={{ position: "relative", margin: "16px 4% 16px 4%", width: "92%", border: "1px solid #e8e4de" }}>
+      {corners}
+      <div style={{ padding: "18px 28px" }}>
+
+        <SectionHeader title="models." />
+
+        <ProjEntry
+          title="Policy Gradient Methods"
+          links={[{ href: "https://github.com/katekolomii/deep-rl-policy-gradients", label: "github →" }]}
+          description="REINFORCE, PG+Baseline, and PPO from scratch on MuJoCo Ant-v5. PPO reached 1565 return by episode 2000 while REINFORCE plateaued at 350."
+          tags={["PyTorch", "MuJoCo", "GAE"]}
+        />
+        <ProjEntry
+          title="NASA NEO Risk Classifier"
+          links={[
+            { href: "https://github.com/katekolomii/neo-asteroid-classifier", label: "github →" },
+            { href: "https://asteroid-classifier.streamlit.app/", label: "live →" },
+          ]}
+          description="Asteroid hazard detection on NASA's NEO dataset. Recall-first approach — in planetary defense, missing a real threat is worse than a false alarm. 97% recall on hazardous class. Deployed as a live Streamlit app."
+          tags={["scikit-learn", "SMOTE", "Streamlit"]}
+        />
+        <ProjEntry
+          title="Multi-Factor Portfolio Model"
+          description={<>Fama-French 5-factor regression model for a GU long-short equity fund. Decomposes portfolio risk into market, size, value, profitability, and investment buckets. R<sup>2</sup> = 0.845, AUC = 0.937. Streamlit app for portfolio upload and real-time factor analysis.</>}
+          tags={["Python", "Pandas", "Regression", "Streamlit"]}
+        />
+
+        {/* Section divider */}
+        <div style={{ borderTop: "0.5px solid #ddd", margin: "24px 0" }} />
+
+        <SectionHeader title="engineering." />
+
+        <ProjEntry
+          last
+          title="Google Maps Review Scraper"
+          links={[{ href: "https://github.com/katekolomii/google-maps-review-scraper", label: "github →" }]}
+          description="Built for Ukraine's national LLM training pipeline at Mintsyfra. Extracted 100K+ real-user reviews across 25 regions, handling infinite scroll, lazy loading, and rate limiting. Output fed directly into NLP modeling for Diia."
+          tags={["Python", "Selenium", "ChromeDriver"]}
+        />
+
+      </div>
+    </div>
+  </div>
+);
+
 const timelineData = [
-    { id: 1, title: "Education",  date: "", content: "", category: "Education",  icon: GraduationCap, relatedIds: [2, 5], status: "completed" as const, energy: 90, color: "#f9a8d4", customContent: educationContent },
-    { id: 2, title: "Experience", date: "", content: "", category: "Experience", icon: Briefcase,     relatedIds: [1, 3], status: "completed" as const, energy: 80, color: "#f9a8d4" },
-    { id: 3, title: "Projects",   date: "", content: "", category: "Projects",   icon: FolderGit2,    relatedIds: [2, 4], status: "in-progress" as const, energy: 70, color: "#f9a8d4" },
-    { id: 4, title: "Hobbies",    date: "", content: "", category: "Hobbies",    icon: Heart,         relatedIds: [3, 5], status: "completed" as const, energy: 60, color: "#f9a8d4" },
-    { id: 5, title: "About Me",   date: "", content: "", category: "About",      icon: User,          relatedIds: [4, 1], status: "completed" as const, energy: 100, color: "#f9a8d4" },
+    { id: 1, title: "Education",  date: "", content: "", category: "Education",  icon: GraduationCap, relatedIds: [2, 4], status: "completed" as const,     energy: 90,  color: "#f9a8d4", customContent: educationContent },
+    { id: 2, title: "Experience", date: "", content: "", category: "Experience", icon: Briefcase,     relatedIds: [1, 3], status: "completed" as const,     energy: 80,  color: "#f9a8d4", customContent: experienceContent },
+    { id: 3, title: "Projects",   date: "", content: "", category: "Projects",   icon: FolderGit2,    relatedIds: [2, 4], status: "in-progress" as const,   energy: 70,  color: "#f9a8d4", customContent: projectsContent },
+    { id: 4, title: "About Me",   date: "", content: "", category: "About",      icon: User,          relatedIds: [3, 1], status: "completed" as const,     energy: 100, color: "#f9a8d4", customContent: aboutContent },
 ];
 
 export function RadialOrbitalTimelineDemo() {

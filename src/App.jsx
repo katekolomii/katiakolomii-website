@@ -11,6 +11,9 @@ function App() {
       <div style={{ position: "absolute", inset: 0 }}>
         <RadialOrbitalTimelineDemo />
       </div>
+      <div style={{ position: "absolute", top: 28, left: 36, zIndex: 10, pointerEvents: "none" }}>
+        <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "13px", color: "#1a1a1a", letterSpacing: "0.06em" }}>Kateryna Kolomiichenko</div>
+      </div>
     </AuroraBackground>
   )
 }

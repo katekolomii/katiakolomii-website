@@ -46,18 +46,29 @@ interface RadialOrbitalTimelineProps {
 // Cubic-bezier(0.4, 0, 0.2, 1) approximation via cubic ease-in-out
 const ease = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
 
-const RADIUS = 200;
 const NODE_SIZE = 40;
-// Angle 270° = top of circle (y = -radius)
 const TOP_ANGLE = 270;
 
+// Responsive radius — shrinks on narrow viewports
+function getRadius() {
+  if (typeof window === "undefined") return 200;
+  return Math.min(200, Math.floor(window.innerWidth * 0.38));
+}
+
 export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTimelineProps) {
+  const [radius, setRadius] = useState(getRadius);
   const [rotationAngle, setRotationAngle] = useState(0);
-  const rotationRef = useRef(0); // source of truth for rAF
+  const rotationRef = useRef(0);
   const [autoRotate, setAutoRotate] = useState(true);
 
   const [centerHovered, setCenterHovered] = useState(false);
   const [hoveredNodeId, setHoveredNodeId] = useState<number | null>(null);
+
+  useEffect(() => {
+    const onResize = () => setRadius(getRadius());
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   // Animation / selection state
   const [selectedNodeId, setSelectedNodeId] = useState<number | null>(null);
@@ -151,18 +162,16 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
   const calculatePos = (index: number, total: number) => {
     const angle = ((index / total) * 360 + rotationAngle) % 360;
     const rad = (angle * Math.PI) / 180;
-    const x = RADIUS * Math.cos(rad);
-    const y = RADIUS * Math.sin(rad);
+    const x = radius * Math.cos(rad);
+    const y = radius * Math.sin(rad);
     const zIndex = Math.round(100 + 50 * Math.cos(rad));
-    const opacity = Math.max(0.4, Math.min(1, 0.4 + 0.6 * ((1 + Math.sin(rad)) / 2)));
+    const opacity = Math.max(0.85, Math.min(1, 0.85 + 0.15 * ((1 + Math.sin(rad)) / 2)));
     return { x, y, zIndex, opacity };
   };
 
   const orbiting = selectedNodeId !== null || isAnimating;
   const selectedItem = timelineData.find(d => d.id === selectedNodeId) ?? null;
 
-  // Card sits just below the top node — orbit center is at 50vh, top node at 50vh - RADIUS
-  const cardTop = `calc(50vh - ${RADIUS - NODE_SIZE - 8}px)`;
 
   return (
     <div
@@ -176,7 +185,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
         {/* Orbit ring */}
         <div style={{
           position: "absolute",
-          width: RADIUS * 2, height: RADIUS * 2,
+          width: radius * 2, height: radius * 2,
           transform: "translate(-50%, -50%)",
           borderRadius: "50%",
           border: "1px solid rgba(26,26,26,0.35)",
@@ -192,7 +201,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
             width: 182, height: 182,
             transform: "translate(-50%, -50%)",
             display: "flex", alignItems: "center", justifyContent: "center",
-            cursor: "default", zIndex: 10,
+            cursor: "crosshair", zIndex: 10,
             opacity: orbiting ? 0.2 : 1,
             transition: "opacity 0.4s ease",
           }}
@@ -212,8 +221,8 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
           }}>{ASCII_PORTRAIT}</pre>
 
           <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+            animate={{ rotate: 360, opacity: centerHovered ? 1 : [0.4, 0.9, 0.4] }}
+            transition={{ rotate: { duration: 18, repeat: Infinity, ease: "linear" }, opacity: { duration: 2.8, repeat: Infinity, ease: "easeInOut" } }}
             style={{
               position: "absolute", width: 182, height: 182, borderRadius: "50%",
               border: "1px solid rgba(26,26,26,0.1)",
@@ -293,7 +302,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
 
               <div style={{
                 position: "absolute",
-                top: NODE_SIZE + 8,
+                top: NODE_SIZE + 14,
                 left: NODE_SIZE / 2,
                 transform: "translateX(-50%)",
                 whiteSpace: "nowrap",

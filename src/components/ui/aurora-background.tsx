@@ -42,7 +42,7 @@ export const AuroraBackground = ({
               `,
               backgroundSize: "400% 400%",
               filter: "blur(32px)",
-              opacity: 0.25,
+              opacity: 0.35,
             }}
           />
         </div>
