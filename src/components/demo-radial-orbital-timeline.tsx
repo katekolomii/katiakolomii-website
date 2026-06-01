@@ -334,11 +334,17 @@ const projectsContent = (
         <SectionHeader title="engineering." />
 
         <ProjEntry
-          last
           title="Google Maps Review Scraper"
           links={[{ href: "https://github.com/katekolomii/google-maps-review-scraper", label: "github →" }]}
           description="Built for Ukraine's national LLM training pipeline at Mintsyfra. Extracted 100K+ real-user reviews across 25 regions, handling infinite scroll, lazy loading, and rate limiting. Output fed directly into NLP modeling for Diia."
           tags={["Python", "Selenium", "ChromeDriver"]}
+        />
+        <ProjEntry
+          last
+          title="LangSpace"
+          links={[{ href: "#", label: "soon" }]}
+          description="Language learning platform with AI-powered feedback across four skill modules — listening, reading, writing, and speaking. Weekly planner with streak tracking. AI quizzes by proficiency level, grades written submissions, and explains vocabulary with generated images."
+          tags={["Next.js", "TypeScript", "Groq", "GPT-4o-mini", "DALL-E 3"]}
         />
 
       </div>
