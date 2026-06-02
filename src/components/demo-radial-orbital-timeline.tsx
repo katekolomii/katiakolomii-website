@@ -150,12 +150,12 @@ const experienceContent = (
       />
       <ExpEntry
         org="EY Future Bridge" role="Fellow" date="May 2026 — present"
-        detail="San Francisco · Hybrid"
+        detail="San Francisco, CA · Hybrid"
         tags={[xtag("Case Studies", "skill"), xtag("Consulting", "skill"), xtag("Client Presentations", "skill")]}
       />
       <ExpEntry
         org="Georgetown University" role="Teaching Assistant" date="Aug 2025 — present"
-        detail="Data Structures · CS I & II · 100+ students"
+        detail="Data Structures · CS I & II"
         tags={[xtag("COSC 1020/1030"), xtag("COSC 2010")]}
       />
       <ExpEntry
