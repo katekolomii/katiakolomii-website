@@ -1,0 +1,142 @@
+{
+  "/Users/katerynakolomiichenko/katiakolomii-website/.claude/settings.json": {
+    "mtime": 1780350807.945475,
+    "ast_hash": "87f0d903477984d0587a02f8fe185263",
+    "semantic_hash": "87f0d903477984d0587a02f8fe185263"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/components.json": {
+    "mtime": 1780232182.3682182,
+    "ast_hash": "4309401ded0527ef65581f5ae99855a6",
+    "semantic_hash": "4309401ded0527ef65581f5ae99855a6"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/eslint.config.js": {
+    "mtime": 1780230257.8517992,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/package.json": {
+    "mtime": 1780344706.5832326,
+    "ast_hash": "6bd77372256ca9d1151256596fd2e9d5",
+    "semantic_hash": "6bd77372256ca9d1151256596fd2e9d5"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/App.jsx": {
+    "mtime": 1780342995.9426346,
+    "ast_hash": "1cc9979b88548a47e554c83a5cd79c26",
+    "semantic_hash": "1cc9979b88548a47e554c83a5cd79c26"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/background.tsx": {
+    "mtime": 1780315682.3730695,
+    "ast_hash": "7d4c68f788f49d9248a0a31c8266aa2c",
+    "semantic_hash": "7d4c68f788f49d9248a0a31c8266aa2c"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/demo-background.tsx": {
+    "mtime": 1780315406.0897975,
+    "ast_hash": "6c6c328f87a51a94d51e2d19eb4209a0",
+    "semantic_hash": "6c6c328f87a51a94d51e2d19eb4209a0"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/demo-radial-orbital-timeline.tsx": {
+    "mtime": 1780345643.9455905,
+    "ast_hash": "73110782b00909c121a6574b2f36d007",
+    "semantic_hash": "73110782b00909c121a6574b2f36d007"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/radial-orbital-timeline.tsx": {
+    "mtime": 1780314687.1212301,
+    "ast_hash": "351a571d4491a9a571697d3b087c52d2",
+    "semantic_hash": "351a571d4491a9a571697d3b087c52d2"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/shader-background.tsx": {
+    "mtime": 1780230917.952341,
+    "ast_hash": "0cfdb643baf44d1b276e15f16ff26178",
+    "semantic_hash": "0cfdb643baf44d1b276e15f16ff26178"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/ui/aurora-background.tsx": {
+    "mtime": 1780343540.7648778,
+    "ast_hash": "4c9e3348251495abafa2fad1b267f104",
+    "semantic_hash": "4c9e3348251495abafa2fad1b267f104"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/ui/badge.tsx": {
+    "mtime": 1780313988.0767682,
+    "ast_hash": "ad01e5e94310fd0993007d22b338378b",
+    "semantic_hash": "ad01e5e94310fd0993007d22b338378b"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/ui/button.tsx": {
+    "mtime": 1780314468.0943055,
+    "ast_hash": "818d9a46a4f32ccc3406d253bdb2f0b1",
+    "semantic_hash": "818d9a46a4f32ccc3406d253bdb2f0b1"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/ui/card.tsx": {
+    "mtime": 1780314549.3101165,
+    "ast_hash": "7205b7e292c2d4ff27c7220dbb7b3332",
+    "semantic_hash": "7205b7e292c2d4ff27c7220dbb7b3332"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/components/ui/radial-orbital-timeline.tsx": {
+    "mtime": 1780344941.6004217,
+    "ast_hash": "09f74fdceb6dd0062b84f748aa903271",
+    "semantic_hash": "09f74fdceb6dd0062b84f748aa903271"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/lib/utils.ts": {
+    "mtime": 1780314300.378996,
+    "ast_hash": "b3bf68d5c7a7e718b24fb827b27d4977",
+    "semantic_hash": "b3bf68d5c7a7e718b24fb827b27d4977"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/main.jsx": {
+    "mtime": 1780230257.864243,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/tsconfig.json": {
+    "mtime": 1780315113.1233773,
+    "ast_hash": "197d64e96b4dd9bdcd576c096b59d426",
+    "semantic_hash": "197d64e96b4dd9bdcd576c096b59d426"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/vite.config.js": {
+    "mtime": 1780314766.2484577,
+    "ast_hash": "da4acb91863844ac8a173b3dd2317efa",
+    "semantic_hash": "da4acb91863844ac8a173b3dd2317efa"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/CLAUDE.md": {
+    "mtime": 1780350807.945064,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": "82efb97a359f5c7290bf2513d14686be"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/README.md": {
+    "mtime": 1780230257.850733,
+    "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
+    "semantic_hash": "a28dc4cb878325f3e9e5649f3e1469ac"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/index.html": {
+    "mtime": 1780341876.4845133,
+    "ast_hash": "f8907379c3ebaf239d63a6e4d387cdfe",
+    "semantic_hash": "f8907379c3ebaf239d63a6e4d387cdfe"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/public/favicon.svg": {
+    "mtime": 1780230257.8561344,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/public/grdr_2026-01-18_220425.888_2-removebg-preview.png": {
+    "mtime": 1780316693.102592,
+    "ast_hash": "43adba747c4039ac6702c68f0bf5b263",
+    "semantic_hash": "43adba747c4039ac6702c68f0bf5b263"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/public/icons.svg": {
+    "mtime": 1780230257.8574865,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/assets/hero.png": {
+    "mtime": 1780230257.861793,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": "aead493361b27e7510691c5d7072dfc1"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/assets/react.svg": {
+    "mtime": 1780230257.8627622,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "/Users/katerynakolomiichenko/katiakolomii-website/src/assets/vite.svg": {
+    "mtime": 1780230257.8633974,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": "9960a24288958394ac50e57ff638b036"
+  }
+}
