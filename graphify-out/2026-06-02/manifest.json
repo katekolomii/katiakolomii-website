@@ -15,14 +15,14 @@
     "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/package.json": {
-    "mtime": 1780388516.614795,
-    "ast_hash": "c20e28f6ec641a33fdf53139f1699412",
-    "semantic_hash": ""
+    "mtime": 1780344706.5832326,
+    "ast_hash": "6bd77372256ca9d1151256596fd2e9d5",
+    "semantic_hash": "6bd77372256ca9d1151256596fd2e9d5"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/src/App.jsx": {
-    "mtime": 1780389075.301317,
-    "ast_hash": "51997f8d3d2c03cbeefd8d4a44ec892d",
-    "semantic_hash": ""
+    "mtime": 1780342995.9426346,
+    "ast_hash": "1cc9979b88548a47e554c83a5cd79c26",
+    "semantic_hash": "1cc9979b88548a47e554c83a5cd79c26"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/src/components/background.tsx": {
     "mtime": 1780315682.3730695,
@@ -35,9 +35,9 @@
     "semantic_hash": "6c6c328f87a51a94d51e2d19eb4209a0"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/src/components/demo-radial-orbital-timeline.tsx": {
-    "mtime": 1780408377.4674394,
-    "ast_hash": "3daca8caac2af5216e13041128f3e0aa",
-    "semantic_hash": ""
+    "mtime": 1780345643.9455905,
+    "ast_hash": "73110782b00909c121a6574b2f36d007",
+    "semantic_hash": "73110782b00909c121a6574b2f36d007"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/src/components/radial-orbital-timeline.tsx": {
     "mtime": 1780314687.1212301,
@@ -80,9 +80,9 @@
     "semantic_hash": "b3bf68d5c7a7e718b24fb827b27d4977"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/src/main.jsx": {
-    "mtime": 1780388557.5566847,
-    "ast_hash": "3a591c0d4d8d865f45b79a0b98335278",
-    "semantic_hash": ""
+    "mtime": 1780230257.864243,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/tsconfig.json": {
     "mtime": 1780315113.1233773,
@@ -105,14 +105,14 @@
     "semantic_hash": "a28dc4cb878325f3e9e5649f3e1469ac"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/index.html": {
-    "mtime": 1780388218.9738865,
-    "ast_hash": "984a3c2f596845ed5dfaf7c7d02e3674",
-    "semantic_hash": ""
+    "mtime": 1780341876.4845133,
+    "ast_hash": "f8907379c3ebaf239d63a6e4d387cdfe",
+    "semantic_hash": "f8907379c3ebaf239d63a6e4d387cdfe"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/public/favicon.svg": {
-    "mtime": 1780388140.0578275,
-    "ast_hash": "6854860ba84b4f131f433d3018587797",
-    "semantic_hash": ""
+    "mtime": 1780230257.8561344,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
   },
   "/Users/katerynakolomiichenko/katiakolomii-website/public/grdr_2026-01-18_220425.888_2-removebg-preview.png": {
     "mtime": 1780316693.102592,
@@ -138,45 +138,5 @@
     "mtime": 1780230257.8633974,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": "9960a24288958394ac50e57ff638b036"
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/@vercel_analytics_react.js": {
-    "mtime": 1780388940.7319775,
-    "ast_hash": "fec6c0fd9263aabc37c7216898de6a73",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/_metadata.json": {
-    "mtime": 1780388940.739316,
-    "ast_hash": "1f8747181d318f410657c2bd879e2f53",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/lucide-react.js": {
-    "mtime": 1780388940.733303,
-    "ast_hash": "70556322674f21b60399f9b1fc736f26",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/package.json": {
-    "mtime": 1780388940.4539127,
-    "ast_hash": "d0707362e90f00edd12435e9d3b9d71c",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/react-Cvh7Ylf6.js": {
-    "mtime": 1780388940.7342222,
-    "ast_hash": "888785965fe0e2ea6ae0199b3a93a695",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/react-dom_client.js": {
-    "mtime": 1780388940.7336721,
-    "ast_hash": "bf5b0c4a4069a6e0c0cc02f353ef5184",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/react.js": {
-    "mtime": 1780388940.7338793,
-    "ast_hash": "bb99630d3eee3ea12252f90ff47714fb",
-    "semantic_hash": ""
-  },
-  "/Users/katerynakolomiichenko/katiakolomii-website/.vite/deps/react_jsx-dev-runtime.js": {
-    "mtime": 1780388940.7340856,
-    "ast_hash": "a3efffa09c2d65ee073b3243cbf1d420",
-    "semantic_hash": ""
   }
 }

@@ -144,9 +144,19 @@ const experienceContent = (
       {corners}
 
       <ExpEntry
+        org="Ministry of Digital Transformation" role="AI Engineer Intern" date="Jun 2026 — present"
+        detail="Ukraine · Kyiv"
+        tags={[]}
+      />
+      <ExpEntry
+        org="EY Future Bridge" role="Fellow" date="May 2026 — present"
+        detail="San Francisco · Hybrid"
+        tags={[xtag("Case Studies", "skill"), xtag("Consulting", "skill"), xtag("Client Presentations", "skill")]}
+      />
+      <ExpEntry
         org="Georgetown University" role="Teaching Assistant" date="Aug 2025 — present"
         detail="Data Structures · CS I & II · 100+ students"
-        tags={[xtag("current", "current"), xtag("COSC 1020/1030"), xtag("COSC 2010")]}
+        tags={[xtag("COSC 1020/1030"), xtag("COSC 2010")]}
       />
       <ExpEntry
         org="Ministry of Digital Transformation" role="Software Engineer Intern" date="Jul — Aug 2025"

@@ -1,0 +1,4443 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "cn_classname_utility_consumers",
+        "label": "shadcn UI primitives sharing cn() className merger",
+        "nodes": [
+          "ui_badge_badge",
+          "ui_button_button",
+          "ui_card_card",
+          "ui_aurora_background_aurorabackground",
+          "lib_utils_cn"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/lib/utils.ts"
+      },
+      {
+        "id": "timeline_data_flow",
+        "label": "Timeline data flows from App through demo timelineData into active orbital renderer",
+        "nodes": [
+          "src_app_app",
+          "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+          "components_demo_radial_orbital_timeline_timelinedata",
+          "ui_radial_orbital_timeline_radialorbitaltimeline"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "src/components/demo-radial-orbital-timeline.tsx"
+      },
+      {
+        "id": "orbital_card_content_sections",
+        "label": "Portfolio content sections rendered inside orbital timeline cards",
+        "nodes": [
+          "components_demo_radial_orbital_timeline_eduentry",
+          "components_demo_radial_orbital_timeline_expentry",
+          "components_demo_radial_orbital_timeline_projentry",
+          "components_demo_radial_orbital_timeline_timelinedata"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "src/components/demo-radial-orbital-timeline.tsx"
+      },
+      {
+        "id": "vite_react_tailwind_build",
+        "label": "Vite + React + Tailwind Build Stack",
+        "nodes": [
+          "vite_config_config",
+          "vite_config_plugin_react",
+          "vite_config_tailwind_plugin"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "vite.config.js"
+      },
+      {
+        "id": "three_js_3d_stack",
+        "label": "React Three.js 3D Rendering Stack",
+        "nodes": [
+          "package_json_three",
+          "package_json_react_three_fiber",
+          "package_json_react_three_drei"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.85,
+        "source_file": "package.json"
+      },
+      {
+        "id": "shadcn_ui_stack",
+        "label": "shadcn UI Component Stack",
+        "nodes": [
+          "package_json_shadcn",
+          "package_json_radix_ui",
+          "components_json_config"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.85,
+        "source_file": "components.json"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L1",
+      "id": "claude_settings",
+      "community": 10,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "id": "claude_settings_hooks",
+      "community": 10,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "id": "claude_settings_hooks_pretooluse",
+      "community": 10,
+      "norm_label": "pretooluse"
+    },
+    {
+      "label": "components.json",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L1",
+      "id": "components",
+      "community": 4,
+      "norm_label": "components.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L2",
+      "id": "components_schema",
+      "community": 4,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "style",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L3",
+      "id": "components_style",
+      "community": 4,
+      "norm_label": "style"
+    },
+    {
+      "label": "rsc",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L4",
+      "id": "components_rsc",
+      "community": 4,
+      "norm_label": "rsc"
+    },
+    {
+      "label": "tsx",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L5",
+      "id": "components_tsx",
+      "community": 4,
+      "norm_label": "tsx"
+    },
+    {
+      "label": "tailwind",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L6",
+      "id": "components_tailwind",
+      "community": 4,
+      "norm_label": "tailwind"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L7",
+      "id": "components_tailwind_config",
+      "community": 4,
+      "norm_label": "config"
+    },
+    {
+      "label": "css",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L8",
+      "id": "components_tailwind_css",
+      "community": 4,
+      "norm_label": "css"
+    },
+    {
+      "label": "baseColor",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L9",
+      "id": "components_tailwind_basecolor",
+      "community": 4,
+      "norm_label": "basecolor"
+    },
+    {
+      "label": "cssVariables",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L10",
+      "id": "components_tailwind_cssvariables",
+      "community": 4,
+      "norm_label": "cssvariables"
+    },
+    {
+      "label": "prefix",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L11",
+      "id": "components_tailwind_prefix",
+      "community": 4,
+      "norm_label": "prefix"
+    },
+    {
+      "label": "iconLibrary",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L13",
+      "id": "components_iconlibrary",
+      "community": 4,
+      "norm_label": "iconlibrary"
+    },
+    {
+      "label": "rtl",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L14",
+      "id": "components_rtl",
+      "community": 4,
+      "norm_label": "rtl"
+    },
+    {
+      "label": "aliases",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L15",
+      "id": "components_aliases",
+      "community": 4,
+      "norm_label": "aliases"
+    },
+    {
+      "label": "components",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L16",
+      "id": "components_aliases_components",
+      "community": 4,
+      "norm_label": "components"
+    },
+    {
+      "label": "utils",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L17",
+      "id": "components_aliases_utils",
+      "community": 4,
+      "norm_label": "utils"
+    },
+    {
+      "label": "ui",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L18",
+      "id": "components_aliases_ui",
+      "community": 4,
+      "norm_label": "ui"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L19",
+      "id": "components_aliases_lib",
+      "community": 4,
+      "norm_label": "lib"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L20",
+      "id": "components_aliases_hooks",
+      "community": 4,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "menuColor",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L22",
+      "id": "components_menucolor",
+      "community": 4,
+      "norm_label": "menucolor"
+    },
+    {
+      "label": "menuAccent",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L23",
+      "id": "components_menuaccent",
+      "community": 4,
+      "norm_label": "menuaccent"
+    },
+    {
+      "label": "registries",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L24",
+      "id": "components_registries",
+      "community": 4,
+      "norm_label": "registries"
+    },
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "id": "eslint_config",
+      "community": 11,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package",
+      "community": 1,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "package_name",
+      "community": 1,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "package_private",
+      "community": 1,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "package_version",
+      "community": 1,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "package_type",
+      "community": 1,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "package_scripts",
+      "community": 1,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "package_scripts_dev",
+      "community": 1,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "package_scripts_build",
+      "community": 1,
+      "norm_label": "build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "package_scripts_lint",
+      "community": 1,
+      "norm_label": "lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "package_scripts_preview",
+      "community": 1,
+      "norm_label": "preview"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "package_dependencies",
+      "community": 5,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@fontsource-variable/geist",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "package_dependencies_fontsource_variable_geist",
+      "community": 5,
+      "norm_label": "@fontsource-variable/geist"
+    },
+    {
+      "label": "@paper-design/shaders-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "package_dependencies_paper_design_shaders_react",
+      "community": 5,
+      "norm_label": "@paper-design/shaders-react"
+    },
+    {
+      "label": "@radix-ui/react-slot",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "package_dependencies_radix_ui_react_slot",
+      "community": 5,
+      "norm_label": "@radix-ui/react-slot"
+    },
+    {
+      "label": "@react-three/drei",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "package_dependencies_react_three_drei",
+      "community": 5,
+      "norm_label": "@react-three/drei"
+    },
+    {
+      "label": "@react-three/fiber",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_dependencies_react_three_fiber",
+      "community": 5,
+      "norm_label": "@react-three/fiber"
+    },
+    {
+      "label": "@tailwindcss/vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "package_dependencies_tailwindcss_vite",
+      "community": 5,
+      "norm_label": "@tailwindcss/vite"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "package_dependencies_class_variance_authority",
+      "community": 5,
+      "norm_label": "class-variance-authority"
+    },
+    {
+      "label": "clsx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "package_dependencies_clsx",
+      "community": 5,
+      "norm_label": "clsx"
+    },
+    {
+      "label": "framer-motion",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "package_dependencies_framer_motion",
+      "community": 5,
+      "norm_label": "framer-motion"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "package_dependencies_lucide_react",
+      "community": 5,
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "radix-ui",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "package_dependencies_radix_ui",
+      "community": 5,
+      "norm_label": "radix-ui"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "package_dependencies_react",
+      "community": 5,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "id": "package_dependencies_react_dom",
+      "community": 5,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "shadcn",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "package_dependencies_shadcn",
+      "community": 5,
+      "norm_label": "shadcn"
+    },
+    {
+      "label": "tailwind-merge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "package_dependencies_tailwind_merge",
+      "community": 5,
+      "norm_label": "tailwind-merge"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "id": "package_dependencies_tailwindcss",
+      "community": 5,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "three",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "id": "package_dependencies_three",
+      "community": 5,
+      "norm_label": "three"
+    },
+    {
+      "label": "tw-animate-css",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "id": "package_dependencies_tw_animate_css",
+      "community": 5,
+      "norm_label": "tw-animate-css"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "id": "package_devdependencies",
+      "community": 1,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "id": "package_devdependencies_eslint_js",
+      "community": 1,
+      "norm_label": "@eslint/js"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "id": "package_devdependencies_types_node",
+      "community": 1,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "id": "package_devdependencies_types_react",
+      "community": 1,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "id": "package_devdependencies_types_react_dom",
+      "community": 1,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@types/three",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "id": "package_devdependencies_types_three",
+      "community": 1,
+      "norm_label": "@types/three"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "id": "package_devdependencies_vitejs_plugin_react",
+      "community": 1,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "id": "package_devdependencies_eslint",
+      "community": 1,
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-plugin-react-hooks",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "id": "package_devdependencies_eslint_plugin_react_hooks",
+      "community": 1,
+      "norm_label": "eslint-plugin-react-hooks"
+    },
+    {
+      "label": "eslint-plugin-react-refresh",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "id": "package_devdependencies_eslint_plugin_react_refresh",
+      "community": 1,
+      "norm_label": "eslint-plugin-react-refresh"
+    },
+    {
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "id": "package_devdependencies_globals",
+      "community": 1,
+      "norm_label": "globals"
+    },
+    {
+      "label": "jimp",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "id": "package_devdependencies_jimp",
+      "community": 1,
+      "norm_label": "jimp"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "id": "package_devdependencies_typescript",
+      "community": 1,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "id": "package_devdependencies_vite",
+      "community": 1,
+      "norm_label": "vite"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L1",
+      "id": "src_app",
+      "community": 3,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L4",
+      "id": "src_app_app",
+      "community": 3,
+      "norm_label": "app()"
+    },
+    {
+      "label": "background.tsx",
+      "file_type": "code",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L1",
+      "id": "components_background",
+      "community": 7,
+      "norm_label": "background.tsx"
+    },
+    {
+      "label": "FloatingPaths()",
+      "file_type": "code",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L6",
+      "id": "components_background_floatingpaths",
+      "community": 7,
+      "norm_label": "floatingpaths()"
+    },
+    {
+      "label": "BackgroundPaths()",
+      "file_type": "code",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L50",
+      "id": "components_background_backgroundpaths",
+      "community": 7,
+      "norm_label": "backgroundpaths()"
+    },
+    {
+      "label": "demo-background.tsx",
+      "file_type": "code",
+      "source_file": "src/components/demo-background.tsx",
+      "source_location": "L1",
+      "id": "components_demo_background",
+      "community": 7,
+      "norm_label": "demo-background.tsx"
+    },
+    {
+      "label": "DemoBackgroundPaths()",
+      "file_type": "code",
+      "source_file": "src/components/demo-background.tsx",
+      "source_location": "L4",
+      "id": "components_demo_background_demobackgroundpaths",
+      "community": 7,
+      "norm_label": "demobackgroundpaths()"
+    },
+    {
+      "label": "demo-radial-orbital-timeline.tsx",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L1",
+      "id": "components_demo_radial_orbital_timeline",
+      "community": 2,
+      "norm_label": "demo-radial-orbital-timeline.tsx"
+    },
+    {
+      "label": "PINK_TAG",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L9",
+      "id": "components_demo_radial_orbital_timeline_pink_tag",
+      "community": 2,
+      "norm_label": "pink_tag"
+    },
+    {
+      "label": "tag()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L15",
+      "id": "components_demo_radial_orbital_timeline_tag",
+      "community": 2,
+      "norm_label": "tag()"
+    },
+    {
+      "label": "EduEntry()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L52",
+      "id": "components_demo_radial_orbital_timeline_eduentry",
+      "community": 2,
+      "norm_label": "eduentry()"
+    },
+    {
+      "label": "xtag()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L103",
+      "id": "components_demo_radial_orbital_timeline_xtag",
+      "community": 2,
+      "norm_label": "xtag()"
+    },
+    {
+      "label": "ExpEntryProps",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L118",
+      "id": "components_demo_radial_orbital_timeline_expentryprops",
+      "community": 2,
+      "norm_label": "expentryprops"
+    },
+    {
+      "label": "ExpEntry()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L126",
+      "id": "components_demo_radial_orbital_timeline_expentry",
+      "community": 2,
+      "norm_label": "expentry()"
+    },
+    {
+      "label": "ProjLink()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L248",
+      "id": "components_demo_radial_orbital_timeline_projlink",
+      "community": 2,
+      "norm_label": "projlink()"
+    },
+    {
+      "label": "SectionHeader()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L259",
+      "id": "components_demo_radial_orbital_timeline_sectionheader",
+      "community": 2,
+      "norm_label": "sectionheader()"
+    },
+    {
+      "label": "ProjEntryProps",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L268",
+      "id": "components_demo_radial_orbital_timeline_projentryprops",
+      "community": 2,
+      "norm_label": "projentryprops"
+    },
+    {
+      "label": "ProjEntry()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L276",
+      "id": "components_demo_radial_orbital_timeline_projentry",
+      "community": 2,
+      "norm_label": "projentry()"
+    },
+    {
+      "label": "skillSection()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L348",
+      "id": "components_demo_radial_orbital_timeline_skillsection",
+      "community": 2,
+      "norm_label": "skillsection()"
+    },
+    {
+      "label": "timelineData",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L372",
+      "id": "components_demo_radial_orbital_timeline_timelinedata",
+      "community": 2,
+      "norm_label": "timelinedata"
+    },
+    {
+      "label": "RadialOrbitalTimelineDemo()",
+      "file_type": "code",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L380",
+      "id": "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+      "community": 2,
+      "norm_label": "radialorbitaltimelinedemo()"
+    },
+    {
+      "label": "radial-orbital-timeline.tsx",
+      "file_type": "code",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L1",
+      "id": "components_radial_orbital_timeline",
+      "community": 3,
+      "norm_label": "radial-orbital-timeline.tsx"
+    },
+    {
+      "label": "TimelineItem",
+      "file_type": "code",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L7",
+      "id": "components_radial_orbital_timeline_timelineitem",
+      "community": 3,
+      "norm_label": "timelineitem"
+    },
+    {
+      "label": "RadialOrbitalTimelineProps",
+      "file_type": "code",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L19",
+      "id": "components_radial_orbital_timeline_radialorbitaltimelineprops",
+      "community": 3,
+      "norm_label": "radialorbitaltimelineprops"
+    },
+    {
+      "label": "RadialOrbitalTimeline()",
+      "file_type": "code",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L23",
+      "id": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "community": 2,
+      "norm_label": "radialorbitaltimeline()"
+    },
+    {
+      "label": "shader-background.tsx",
+      "file_type": "code",
+      "source_file": "src/components/shader-background.tsx",
+      "source_location": "L1",
+      "id": "components_shader_background",
+      "community": 7,
+      "norm_label": "shader-background.tsx"
+    },
+    {
+      "label": "ShaderPlane()",
+      "file_type": "code",
+      "source_file": "src/components/shader-background.tsx",
+      "source_location": "L50",
+      "id": "components_shader_background_shaderplane",
+      "community": 7,
+      "norm_label": "shaderplane()"
+    },
+    {
+      "label": "EnergyRing()",
+      "file_type": "code",
+      "source_file": "src/components/shader-background.tsx",
+      "source_location": "L92",
+      "id": "components_shader_background_energyring",
+      "community": 7,
+      "norm_label": "energyring()"
+    },
+    {
+      "label": "aurora-background.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L1",
+      "id": "ui_aurora_background",
+      "community": 3,
+      "norm_label": "aurora-background.tsx"
+    },
+    {
+      "label": "AuroraBackgroundProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L5",
+      "id": "ui_aurora_background_aurorabackgroundprops",
+      "community": 3,
+      "norm_label": "aurorabackgroundprops"
+    },
+    {
+      "label": "AuroraBackground()",
+      "file_type": "code",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L10",
+      "id": "ui_aurora_background_aurorabackground",
+      "community": 3,
+      "norm_label": "aurorabackground()"
+    },
+    {
+      "label": "badge.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L1",
+      "id": "ui_badge",
+      "community": 3,
+      "norm_label": "badge.tsx"
+    },
+    {
+      "label": "badgeVariants",
+      "file_type": "code",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L6",
+      "id": "ui_badge_badgevariants",
+      "community": 3,
+      "norm_label": "badgevariants"
+    },
+    {
+      "label": "BadgeProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L26",
+      "id": "ui_badge_badgeprops",
+      "community": 3,
+      "norm_label": "badgeprops"
+    },
+    {
+      "label": "Badge()",
+      "file_type": "code",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L30",
+      "id": "ui_badge_badge",
+      "community": 3,
+      "norm_label": "badge()"
+    },
+    {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L1",
+      "id": "ui_button",
+      "community": 7,
+      "norm_label": "button.tsx"
+    },
+    {
+      "label": "buttonVariants",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L7",
+      "id": "ui_button_buttonvariants",
+      "community": 7,
+      "norm_label": "buttonvariants"
+    },
+    {
+      "label": "ButtonProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L36",
+      "id": "ui_button_buttonprops",
+      "community": 7,
+      "norm_label": "buttonprops"
+    },
+    {
+      "label": "Button",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L42",
+      "id": "ui_button_button",
+      "community": 7,
+      "norm_label": "button"
+    },
+    {
+      "label": "card.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L1",
+      "id": "ui_card",
+      "community": 3,
+      "norm_label": "card.tsx"
+    },
+    {
+      "label": "Card",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L5",
+      "id": "ui_card_card",
+      "community": 3,
+      "norm_label": "card"
+    },
+    {
+      "label": "CardHeader",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L20",
+      "id": "ui_card_cardheader",
+      "community": 3,
+      "norm_label": "cardheader"
+    },
+    {
+      "label": "CardTitle",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L32",
+      "id": "ui_card_cardtitle",
+      "community": 3,
+      "norm_label": "cardtitle"
+    },
+    {
+      "label": "CardDescription",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L47",
+      "id": "ui_card_carddescription",
+      "community": 3,
+      "norm_label": "carddescription"
+    },
+    {
+      "label": "CardContent",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L59",
+      "id": "ui_card_cardcontent",
+      "community": 3,
+      "norm_label": "cardcontent"
+    },
+    {
+      "label": "CardFooter",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L67",
+      "id": "ui_card_cardfooter",
+      "community": 3,
+      "norm_label": "cardfooter"
+    },
+    {
+      "label": "radial-orbital-timeline.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L1",
+      "id": "ui_radial_orbital_timeline",
+      "community": 2,
+      "norm_label": "radial-orbital-timeline.tsx"
+    },
+    {
+      "label": "TimelineItem",
+      "file_type": "code",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L28",
+      "id": "ui_radial_orbital_timeline_timelineitem",
+      "community": 2,
+      "norm_label": "timelineitem"
+    },
+    {
+      "label": "RadialOrbitalTimelineProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L43",
+      "id": "ui_radial_orbital_timeline_radialorbitaltimelineprops",
+      "community": 2,
+      "norm_label": "radialorbitaltimelineprops"
+    },
+    {
+      "label": "ease()",
+      "file_type": "code",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L48",
+      "id": "ui_radial_orbital_timeline_ease",
+      "community": 2,
+      "norm_label": "ease()"
+    },
+    {
+      "label": "getRadius()",
+      "file_type": "code",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L54",
+      "id": "ui_radial_orbital_timeline_getradius",
+      "community": 2,
+      "norm_label": "getradius()"
+    },
+    {
+      "label": "RadialOrbitalTimeline()",
+      "file_type": "code",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L59",
+      "id": "ui_radial_orbital_timeline_radialorbitaltimeline",
+      "community": 2,
+      "norm_label": "radialorbitaltimeline()"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L1",
+      "id": "lib_utils",
+      "community": 3,
+      "norm_label": "utils.ts"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L4",
+      "id": "lib_utils_cn",
+      "community": 3,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "src/main.jsx",
+      "source_location": "L1",
+      "id": "src_main",
+      "community": 3,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig",
+      "community": 6,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "tsconfig_compileroptions",
+      "community": 6,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "tsconfig_compileroptions_target",
+      "community": 6,
+      "norm_label": "target"
+    },
+    {
+      "label": "useDefineForClassFields",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "id": "tsconfig_compileroptions_usedefineforclassfields",
+      "community": 6,
+      "norm_label": "usedefineforclassfields"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "id": "tsconfig_compileroptions_lib",
+      "community": 6,
+      "norm_label": "lib"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "id": "tsconfig_compileroptions_module",
+      "community": 6,
+      "norm_label": "module"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "community": 6,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "community": 6,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "allowImportingTsExtensions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "id": "tsconfig_compileroptions_allowimportingtsextensions",
+      "community": 6,
+      "norm_label": "allowimportingtsextensions"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "id": "tsconfig_compileroptions_resolvejsonmodule",
+      "community": 6,
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "community": 6,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "id": "tsconfig_compileroptions_noemit",
+      "community": 6,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "id": "tsconfig_compileroptions_jsx",
+      "community": 6,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L18",
+      "id": "tsconfig_compileroptions_strict",
+      "community": 6,
+      "norm_label": "strict"
+    },
+    {
+      "label": "ignoreDeprecations",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "id": "tsconfig_compileroptions_ignoredeprecations",
+      "community": 6,
+      "norm_label": "ignoredeprecations"
+    },
+    {
+      "label": "baseUrl",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "id": "tsconfig_compileroptions_baseurl",
+      "community": 6,
+      "norm_label": "baseurl"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "id": "tsconfig_compileroptions_paths",
+      "community": 6,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "id": "tsconfig_paths",
+      "community": 6,
+      "norm_label": "@/*"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L27",
+      "id": "tsconfig_include",
+      "community": 6,
+      "norm_label": "include"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": "L1",
+      "id": "vite_config",
+      "community": 12,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "main entry",
+      "file_type": "code",
+      "source_file": "src/main.jsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_main_main",
+      "community": 3,
+      "norm_label": "main entry"
+    },
+    {
+      "label": "TimelineItem data shape",
+      "file_type": "concept",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_timelineitem_shape",
+      "community": 2,
+      "norm_label": "timelineitem data shape"
+    },
+    {
+      "label": "Radial orbital timeline pattern",
+      "file_type": "concept",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_radial_orbital_pattern",
+      "community": 2,
+      "norm_label": "radial orbital timeline pattern"
+    },
+    {
+      "label": "Graphify Knowledge Graph Workflow",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_graphify_workflow",
+      "community": 9,
+      "norm_label": "graphify knowledge graph workflow"
+    },
+    {
+      "label": "graphify-out Directory",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_graphify_out",
+      "community": 9,
+      "norm_label": "graphify-out directory"
+    },
+    {
+      "label": "React + Vite Template README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_overview",
+      "community": 0,
+      "norm_label": "react + vite template readme"
+    },
+    {
+      "label": "React Compiler (disabled)",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_react_compiler",
+      "community": 0,
+      "norm_label": "react compiler (disabled)"
+    },
+    {
+      "label": "index.html Entry Point",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html_entry",
+      "community": 0,
+      "norm_label": "index.html entry point"
+    },
+    {
+      "label": "Google Fonts (Anton, DM Mono, EB Garamond, Playfair Display)",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html_google_fonts",
+      "community": 0,
+      "norm_label": "google fonts (anton, dm mono, eb garamond, playfair display)"
+    },
+    {
+      "label": "package.json Manifest",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_manifest",
+      "community": 0,
+      "norm_label": "package.json manifest"
+    },
+    {
+      "label": "React 19",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_react",
+      "community": 0,
+      "norm_label": "react 19"
+    },
+    {
+      "label": "Vite Build Tool",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_vite",
+      "community": 0,
+      "norm_label": "vite build tool"
+    },
+    {
+      "label": "Tailwind CSS 4",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_tailwindcss",
+      "community": 0,
+      "norm_label": "tailwind css 4"
+    },
+    {
+      "label": "Three.js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_three",
+      "community": 0,
+      "norm_label": "three.js"
+    },
+    {
+      "label": "@react-three/fiber",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_react_three_fiber",
+      "community": 0,
+      "norm_label": "@react-three/fiber"
+    },
+    {
+      "label": "@react-three/drei",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_react_three_drei",
+      "community": 0,
+      "norm_label": "@react-three/drei"
+    },
+    {
+      "label": "Framer Motion",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_framer_motion",
+      "community": 0,
+      "norm_label": "framer motion"
+    },
+    {
+      "label": "shadcn UI",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_shadcn",
+      "community": 0,
+      "norm_label": "shadcn ui"
+    },
+    {
+      "label": "Radix UI",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_radix_ui",
+      "community": 0,
+      "norm_label": "radix ui"
+    },
+    {
+      "label": "lucide-react Icons",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_lucide_react",
+      "community": 0,
+      "norm_label": "lucide-react icons"
+    },
+    {
+      "label": "@paper-design/shaders-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_paper_shaders",
+      "community": 0,
+      "norm_label": "@paper-design/shaders-react"
+    },
+    {
+      "label": "ESLint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_eslint",
+      "community": 0,
+      "norm_label": "eslint"
+    },
+    {
+      "label": "TypeScript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "package_json_typescript",
+      "community": 0,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "TypeScript Compiler Config",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tsconfig_config",
+      "community": 0,
+      "norm_label": "typescript compiler config"
+    },
+    {
+      "label": "@/* Path Alias",
+      "file_type": "concept",
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tsconfig_path_alias",
+      "community": 0,
+      "norm_label": "@/* path alias"
+    },
+    {
+      "label": "Vite Config",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "vite_config_config",
+      "community": 0,
+      "norm_label": "vite config"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "vite_config_plugin_react",
+      "community": 0,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "@tailwindcss/vite Plugin",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "vite_config_tailwind_plugin",
+      "community": 0,
+      "norm_label": "@tailwindcss/vite plugin"
+    },
+    {
+      "label": "ESLint Flat Config",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "eslint_config_config",
+      "community": 0,
+      "norm_label": "eslint flat config"
+    },
+    {
+      "label": "eslint-plugin-react-hooks",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "eslint_config_react_hooks",
+      "community": 0,
+      "norm_label": "eslint-plugin-react-hooks"
+    },
+    {
+      "label": "eslint-plugin-react-refresh",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "eslint_config_react_refresh",
+      "community": 0,
+      "norm_label": "eslint-plugin-react-refresh"
+    },
+    {
+      "label": "shadcn components.json Config",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "components_json_config",
+      "community": 0,
+      "norm_label": "shadcn components.json config"
+    },
+    {
+      "label": "radix-nova Style",
+      "file_type": "concept",
+      "source_file": "components.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "components_json_radix_nova_style",
+      "community": 0,
+      "norm_label": "radix-nova style"
+    },
+    {
+      "label": "Claude Code Settings",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_settings_config",
+      "community": 9,
+      "norm_label": "claude code settings"
+    },
+    {
+      "label": "Graphify PreToolUse Bash Hook",
+      "file_type": "concept",
+      "source_file": ".claude/settings.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_settings_graphify_hook",
+      "community": 9,
+      "norm_label": "graphify pretooluse bash hook"
+    },
+    {
+      "label": "Hero Stacked Cards Image",
+      "file_type": "image",
+      "source_file": "src/assets/hero.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_hero",
+      "community": 8,
+      "norm_label": "hero stacked cards image"
+    },
+    {
+      "label": "Personal Portrait (Background Removed)",
+      "file_type": "image",
+      "source_file": "public/grdr_2026-01-18_220425.888_2-removebg-preview.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_grdr_2026_01_18_220425_888_2_removebg_preview",
+      "community": 8,
+      "norm_label": "personal portrait (background removed)"
+    },
+    {
+      "label": "Site Favicon (Purple Lightning Logo)",
+      "file_type": "image",
+      "source_file": "public/favicon.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_favicon",
+      "community": 8,
+      "norm_label": "site favicon (purple lightning logo)"
+    },
+    {
+      "label": "Social/UI Icon Sprite Sheet",
+      "file_type": "image",
+      "source_file": "public/icons.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_icons",
+      "community": 8,
+      "norm_label": "social/ui icon sprite sheet"
+    },
+    {
+      "label": "React Logo (Scaffold Default)",
+      "file_type": "image",
+      "source_file": "src/assets/react.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_react",
+      "community": 8,
+      "norm_label": "react logo (scaffold default)"
+    },
+    {
+      "label": "Vite Logo (Scaffold Default)",
+      "file_type": "image",
+      "source_file": "src/assets/vite.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_vite",
+      "community": 8,
+      "norm_label": "vite logo (scaffold default)"
+    },
+    {
+      "label": "Personal Branding / Portrait Imagery",
+      "file_type": "concept",
+      "source_file": null,
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_personal_branding",
+      "community": 8,
+      "norm_label": "personal branding / portrait imagery"
+    },
+    {
+      "label": "Site Visual Identity (Purple Lightning Mark)",
+      "file_type": "concept",
+      "source_file": null,
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_site_identity",
+      "community": 8,
+      "norm_label": "site visual identity (purple lightning mark)"
+    },
+    {
+      "label": "Social Media Links (Bluesky, Discord, GitHub, X)",
+      "file_type": "concept",
+      "source_file": null,
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_social_links",
+      "community": 8,
+      "norm_label": "social media links (bluesky, discord, github, x)"
+    },
+    {
+      "label": "Framework Scaffold Assets (Likely Unused)",
+      "file_type": "concept",
+      "source_file": null,
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_scaffold_assets",
+      "community": 8,
+      "norm_label": "framework scaffold assets (likely unused)"
+    },
+    {
+      "label": "index.html (HTML Entry Point)",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_html",
+      "community": 8,
+      "norm_label": "index.html (html entry point)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings",
+      "target": "claude_settings_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_pretooluse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_aliases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_iconlibrary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_menuaccent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_menucolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_registries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_rsc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_rtl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_style",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_tailwind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components",
+      "target": "components_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_tailwind",
+      "target": "components_tailwind_basecolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_tailwind",
+      "target": "components_tailwind_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_tailwind",
+      "target": "components_tailwind_css",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "components_tailwind",
+      "target": "components_tailwind_cssvariables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "components_tailwind",
+      "target": "components_tailwind_prefix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "components_aliases",
+      "target": "components_aliases_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "components_aliases",
+      "target": "components_aliases_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "components_aliases",
+      "target": "components_aliases_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "components_aliases",
+      "target": "components_aliases_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "components_aliases",
+      "target": "components_aliases_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_class_variance_authority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_clsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_fontsource_variable_geist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_framer_motion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_lucide_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_paper_design_shaders_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_radix_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_radix_ui_react_slot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_three_drei",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_three_fiber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_shadcn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwind_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwindcss_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_three",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tw_animate_css",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_plugin_react_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_plugin_react_refresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_globals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_jimp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_three",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vitejs_plugin_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_demo_radial_orbital_timeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "ui_aurora_background",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "ui_aurora_background_aurorabackground",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main",
+      "target": "src_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_app_app",
+      "target": "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_app_app",
+      "target": "ui_aurora_background_aurorabackground"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main.jsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "components_background",
+      "target": "components_background_backgroundpaths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_background",
+      "target": "components_background_floatingpaths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_background",
+      "target": "ui_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/background.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_background",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-background.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_demo_background",
+      "target": "components_background",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_background_backgroundpaths",
+      "target": "components_background_floatingpaths"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/components/background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_background_floatingpaths",
+      "target": "components_shader_background_shaderplane"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_background_backgroundpaths",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-background.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_demo_background",
+      "target": "components_background_backgroundpaths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_background_demobackgroundpaths",
+      "target": "components_background_backgroundpaths"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_aurora_background_aurorabackground",
+      "target": "components_background_backgroundpaths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-background.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_demo_background",
+      "target": "components_demo_background_demobackgroundpaths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_eduentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_expentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_expentryprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_pink_tag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_projentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_projentryprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_projlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L380",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_sectionheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L348",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_skillsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_tag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L372",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_timelinedata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "components_demo_radial_orbital_timeline_xtag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline",
+      "target": "ui_radial_orbital_timeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_eduentry",
+      "target": "components_demo_radial_orbital_timeline_timelinedata"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_expentry",
+      "target": "components_demo_radial_orbital_timeline_xtag"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_projentry",
+      "target": "components_demo_radial_orbital_timeline_xtag"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_expentry",
+      "target": "components_demo_radial_orbital_timeline_timelinedata"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_projentry",
+      "target": "components_demo_radial_orbital_timeline_projlink"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_projentry",
+      "target": "components_demo_radial_orbital_timeline_timelinedata"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+      "target": "components_demo_radial_orbital_timeline_timelinedata"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_timelinedata",
+      "target": "concept_timelineitem_shape"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_timelinedata",
+      "target": "ui_radial_orbital_timeline_radialorbitaltimeline"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+      "target": "ui_radial_orbital_timeline_radialorbitaltimeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "components_radial_orbital_timeline_radialorbitaltimelineprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "components_radial_orbital_timeline_timelineitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_badge_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_card_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_card_cardcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_card_cardheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline",
+      "target": "ui_card_cardtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "concept_radial_orbital_pattern"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "concept_timelineitem_shape"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "ui_badge_badge"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "ui_card_card"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/components/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "ui_radial_orbital_timeline_radialorbitaltimeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/shader-background.tsx",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "components_shader_background",
+      "target": "components_shader_background_energyring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/shader-background.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "components_shader_background",
+      "target": "components_shader_background_shaderplane",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/components/shader-background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_shader_background_shaderplane",
+      "target": "components_shader_background_energyring"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ui_aurora_background",
+      "target": "lib_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "ui_aurora_background",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "ui_aurora_background",
+      "target": "ui_aurora_background_aurorabackground",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ui_aurora_background",
+      "target": "ui_aurora_background_aurorabackgroundprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/aurora-background.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_aurora_background_aurorabackground",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ui_badge",
+      "target": "lib_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "ui_badge",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "ui_badge",
+      "target": "ui_badge_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "ui_badge",
+      "target": "ui_badge_badgeprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "ui_badge",
+      "target": "ui_badge_badgevariants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "ui_badge_badge",
+      "target": "ui_badge_badgevariants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/badge.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_badge_badge",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ui_button",
+      "target": "lib_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ui_button",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "ui_button",
+      "target": "ui_button_button",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "ui_button",
+      "target": "ui_button_buttonprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "ui_button",
+      "target": "ui_button_buttonvariants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_button_button",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "lib_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "ui_card_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "ui_card_cardcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "ui_card_carddescription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "ui_card_cardfooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "ui_card_cardheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "ui_card",
+      "target": "ui_card_cardtitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_card_card",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline",
+      "target": "ui_radial_orbital_timeline_ease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline",
+      "target": "ui_radial_orbital_timeline_getradius",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline",
+      "target": "ui_radial_orbital_timeline_radialorbitaltimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline",
+      "target": "ui_radial_orbital_timeline_radialorbitaltimelineprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline",
+      "target": "ui_radial_orbital_timeline_timelineitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "concept_radial_orbital_pattern"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/ui/radial-orbital-timeline.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ui_radial_orbital_timeline_radialorbitaltimeline",
+      "target": "concept_timelineitem_shape"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_utils",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_allowimportingtsextensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_baseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_ignoredeprecations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_resolvejsonmodule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_usedefineforclassfields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions_paths",
+      "target": "tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_graphify_workflow",
+      "target": "claude_md_graphify_out"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/settings.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_settings_graphify_hook",
+      "target": "claude_md_graphify_out"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "package_json_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_overview",
+      "target": "package_json_vite"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_react_compiler",
+      "target": "package_json_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "index_html_entry",
+      "target": "index_html_google_fonts"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "index_html_entry",
+      "target": "package_json_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_eslint"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_framer_motion"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_lucide_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_paper_shaders"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_radix_ui"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_react_three_drei"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_react_three_fiber"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_shadcn"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_tailwindcss"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_three"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_typescript"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_manifest",
+      "target": "package_json_vite"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vite_config_config",
+      "target": "package_json_vite"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vite_config_tailwind_plugin",
+      "target": "package_json_tailwindcss"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_react_three_fiber",
+      "target": "package_json_three"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_react_three_drei",
+      "target": "package_json_react_three_fiber"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_json_config",
+      "target": "package_json_shadcn"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "package.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "package_json_shadcn",
+      "target": "package_json_radix_ui"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_json_config",
+      "target": "package_json_lucide_react"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "eslint_config_config",
+      "target": "package_json_eslint"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "tsconfig_config",
+      "target": "package_json_typescript"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tsconfig.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "tsconfig_config",
+      "target": "tsconfig_path_alias"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "components.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_json_config",
+      "target": "tsconfig_path_alias"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vite_config_config",
+      "target": "tsconfig_path_alias"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vite_config_config",
+      "target": "vite_config_plugin_react"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vite.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vite_config_config",
+      "target": "vite_config_tailwind_plugin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "eslint_config_config",
+      "target": "eslint_config_react_hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "eslint.config.js",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "eslint_config_config",
+      "target": "eslint_config_react_refresh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_json_config",
+      "target": "components_json_radix_nova_style"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/settings.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_settings_config",
+      "target": "claude_settings_graphify_hook"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_hero",
+      "target": "concept_personal_branding"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_hero",
+      "target": "concept_site_identity"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.3,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_grdr_2026_01_18_220425_888_2_removebg_preview",
+      "target": "assets_hero"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_grdr_2026_01_18_220425_888_2_removebg_preview",
+      "target": "concept_personal_branding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": "line 5",
+      "weight": 1.0,
+      "source": "index_html",
+      "target": "public_favicon"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_favicon",
+      "target": "assets_vite"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_favicon",
+      "target": "concept_site_identity"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_icons",
+      "target": "concept_site_identity"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_icons",
+      "target": "concept_social_links"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_react",
+      "target": "assets_vite"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_react",
+      "target": "concept_scaffold_assets"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_vite",
+      "target": "concept_scaffold_assets"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "cn_classname_utility_consumers",
+      "label": "shadcn UI primitives sharing cn() className merger",
+      "nodes": [
+        "ui_badge_badge",
+        "ui_button_button",
+        "ui_card_card",
+        "ui_aurora_background_aurorabackground",
+        "lib_utils_cn"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/utils.ts"
+    },
+    {
+      "id": "timeline_data_flow",
+      "label": "Timeline data flows from App through demo timelineData into active orbital renderer",
+      "nodes": [
+        "src_app_app",
+        "components_demo_radial_orbital_timeline_radialorbitaltimelinedemo",
+        "components_demo_radial_orbital_timeline_timelinedata",
+        "ui_radial_orbital_timeline_radialorbitaltimeline"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx"
+    },
+    {
+      "id": "orbital_card_content_sections",
+      "label": "Portfolio content sections rendered inside orbital timeline cards",
+      "nodes": [
+        "components_demo_radial_orbital_timeline_eduentry",
+        "components_demo_radial_orbital_timeline_expentry",
+        "components_demo_radial_orbital_timeline_projentry",
+        "components_demo_radial_orbital_timeline_timelinedata"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/components/demo-radial-orbital-timeline.tsx"
+    },
+    {
+      "id": "vite_react_tailwind_build",
+      "label": "Vite + React + Tailwind Build Stack",
+      "nodes": [
+        "vite_config_config",
+        "vite_config_plugin_react",
+        "vite_config_tailwind_plugin"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "vite.config.js"
+    },
+    {
+      "id": "three_js_3d_stack",
+      "label": "React Three.js 3D Rendering Stack",
+      "nodes": [
+        "package_json_three",
+        "package_json_react_three_fiber",
+        "package_json_react_three_drei"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "package.json"
+    },
+    {
+      "id": "shadcn_ui_stack",
+      "label": "shadcn UI Component Stack",
+      "nodes": [
+        "package_json_shadcn",
+        "package_json_radix_ui",
+        "components_json_config"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "components.json"
+    }
+  ],
+  "built_at_commit": "2e3b13a5bdd60e64fc435042345b5de78a84fb48"
+}
