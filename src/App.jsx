@@ -21,6 +21,7 @@ function App() {
           <a href="mailto:kate.kolomiychenko@gmail.com" className="contact-link" style={{ fontSize: "11px" }}>email</a>
         </div>
       </div>
+      <div style={{ position: "absolute", bottom: 20, left: "2.5%", zIndex: 10, fontFamily: "'DM Mono', monospace", fontSize: "11px", color: "rgba(0,0,0,0.4)", letterSpacing: "0.06em", pointerEvents: "none", whiteSpace: "nowrap" }}>© Copyright 2026 Kateryna Kolomiichenko</div>
     </AuroraBackground>
   )
 }
