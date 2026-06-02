@@ -146,7 +146,7 @@ const experienceContent = (
       <ExpEntry
         org="Ministry of Digital Transformation" role="AI Engineer Intern" date="Jun 2026 — present"
         detail="Ukraine · Kyiv"
-        tags={[]}
+        tags={[xtag("Data.gov.ua", "dark", "https://data.gov.ua/")]}
       />
       <ExpEntry
         org="EY Future Bridge" role="Fellow" date="May 2026 — present"
