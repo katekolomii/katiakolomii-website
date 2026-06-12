@@ -145,7 +145,7 @@ const experienceContent = (
 
       <ExpEntry
         org="Ministry of Digital Transformation" role="AI Engineer Intern" date="Jun 2026 — present"
-        detail="Ukraine · Kyiv"
+        detail="Ukraine, Kyiv"
         tags={[xtag("Data.gov.ua", "dark", "https://data.gov.ua/")]}
       />
       <ExpEntry
@@ -160,12 +160,12 @@ const experienceContent = (
       />
       <ExpEntry
         org="Georgetown University" role="Teaching Assistant" date="Aug 2025 — present"
-        detail="Data Structures · CS I & II"
-        tags={[xtag("COSC 1020/1030"), xtag("COSC 2010")]}
+        detail="Washington, DC"
+        tags={[xtag("Computer Science I / II"), xtag("Data Structures")]}
       />
       <ExpEntry
         org="Ministry of Digital Transformation" role="Software Engineer Intern" date="Jul — Aug 2025"
-        detail="Ukraine · Kyiv"
+        detail="Ukraine, Kyiv"
         tags={[xtag("Diia", "dark", "https://diia.gov.ua/en"), xtag("Google Maps API"), xtag("Python", "skill"), xtag("Selenium", "skill"), xtag("OpenStreetMap", "skill"), xtag("NLP", "skill")]}
       />
       <ExpEntry
@@ -175,7 +175,7 @@ const experienceContent = (
       />
       <ExpEntry
         org="Ministry of Digital Transformation" role="AI Research Intern" date="Jun — Aug 2024"
-        detail="Ukraine · Kyiv"
+        detail="Ukraine, Kyiv"
         tags={[xtag("Trembita", "dark", "https://trembita.gov.ua/en"), xtag("Tableau", "skill"), xtag("LSTM", "skill"), xtag("Time Series", "skill"), xtag("Python", "skill")]}
       />
       <ExpEntry
