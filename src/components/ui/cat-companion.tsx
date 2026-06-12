@@ -7,6 +7,12 @@ type Mode = 'walk' | 'idle' | 'sleep';
 const AWAKE_IMGS = ['/cats/happy.png', '/cats/letter.png', '/cats/laptop.png', '/cats/rest.png'];
 const SLEEP_IMG = '/cats/sleep.png';
 
+// Per-pose scale so different image framing renders at a consistent visual size.
+const IMG_SCALE: Record<string, number> = {
+  '/cats/happy.png': 1.4,
+  '/cats/sleep.png': 1.15,
+};
+
 const STYLE_ID = 'cat-companion-keyframes';
 function injectKeyframes() {
   if (document.getElementById(STYLE_ID)) return;
@@ -125,7 +131,7 @@ export const CatCompanion = ({ speed = 40, size = 52, anchorSelector = '#copyrig
             draggable={false}
             onError={() => markBroken(src!)}
             style={{
-              width: size * (src === '/cats/happy.png' ? 1.4 : 1),
+              width: size * (IMG_SCALE[src] ?? 1),
               height: 'auto',
               display: 'block',
               userSelect: 'none',
