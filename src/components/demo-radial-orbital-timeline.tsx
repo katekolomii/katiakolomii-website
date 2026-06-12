@@ -149,6 +149,11 @@ const experienceContent = (
         tags={[xtag("Data.gov.ua", "dark", "https://data.gov.ua/")]}
       />
       <ExpEntry
+        org="Brave1" role="Summer Intern" date="Jun 2026 — present"
+        detail="Ukraine, Kyiv"
+        tags={[xtag("Brave1", "dark", "https://brave1.gov.ua/"), xtag("Defense Tech", "skill")]}
+      />
+      <ExpEntry
         org="EY Future Bridge" role="Fellow" date="May 2026 — present"
         detail="San Francisco, CA · Hybrid"
         tags={[xtag("Case Studies", "skill"), xtag("Consulting", "skill"), xtag("Client Presentations", "skill")]}
