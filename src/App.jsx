@@ -1,5 +1,7 @@
 import { RadialOrbitalTimelineDemo } from "./components/demo-radial-orbital-timeline"
 import { AuroraBackground } from "./components/ui/aurora-background"
+import { SparkleCursor } from "./components/ui/sparkle-cursor"
+import { CatCompanion } from "./components/ui/cat-companion"
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <div style={{ position: "absolute", inset: 0 }}>
         <RadialOrbitalTimelineDemo />
       </div>
+      <SparkleCursor />
+      <CatCompanion />
       <div style={{ position: "absolute", top: 28, left: "2.5%", zIndex: 10 }}>
         <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "13px", color: "#1a1a1a", letterSpacing: "0.06em", pointerEvents: "none", lineHeight: 1 }}>Kateryna Kolomiichenko</div>
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 2 }}>

@@ -216,6 +216,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
 
         {/* Center decorative rings + KK */}
         <div
+          data-no-sparkle
           style={{
             position: "absolute",
             width: 182, height: 182,
@@ -369,6 +370,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
               }}
             >
             <motion.div
+              data-no-sparkle
               initial={{ y: -10 }}
               animate={{ y: 0 }}
               exit={{ y: -10 }}
